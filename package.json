@@ -24,6 +24,7 @@
     "gulp-util": "^3.0.4",
     "gulp-watch": "^4.2.4",
     "jspm": "git://github.com/jspm/jspm-cli.git",
+    "react": "^0.13.3",
     "rimraf": "^2.3.4"
   },
   "engines": {
