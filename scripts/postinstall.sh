@@ -6,5 +6,7 @@ set -e
 
 jspm install
 
-npm run bundle
+# npm run bundle
+
+gulp dist
 
