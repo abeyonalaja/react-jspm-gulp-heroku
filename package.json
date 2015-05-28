@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "postinstall": "scripts/postinstall.sh",
-    "bundle": "jspm bundle-sfx scripts/main dist/scripts/bundle.js"
+    "bundle": "t adjspm bundle-sfx scripts/main dist/scripts/bundle.js"
   },
   "dependencies": {
     "browser-sync": "^2.7.6",
@@ -44,7 +44,9 @@
     "directories": {
       "baseURL": "public"
     },
-    "dependencies": {},
+    "dependencies": {
+     "react": "npm:react@^0.14.0-alpha2"
+    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.4.3",
       "babel-runtime": "npm:babel-runtime@^5.4.3",
