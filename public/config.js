@@ -22,6 +22,7 @@ System.config({
     "bootstrap-sass": "npm:bootstrap-sass@3.3.4",
     "core-js": "npm:core-js@0.9.13",
     "react": "npm:react@0.14.0-alpha2",
+    "reflux": "npm:reflux@0.2.7",
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.2.2"
     },
@@ -71,6 +72,10 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
+    "npm:eventemitter3@0.1.6": {
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "util": "github:jspm/nodelibs-util@0.1.0"
+    },
     "npm:events-browserify@0.0.1": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
@@ -84,6 +89,12 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "source-map": "npm:source-map@0.1.31"
+    },
+    "npm:native-promise-only@0.7.6-a": {
+      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"
@@ -104,6 +115,10 @@ System.config({
       "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31",
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:reflux@0.2.7": {
+      "eventemitter3": "npm:eventemitter3@0.1.6",
+      "native-promise-only": "npm:native-promise-only@0.7.6-a"
     },
     "npm:source-map@0.1.31": {
       "amdefine": "npm:amdefine@0.1.0",

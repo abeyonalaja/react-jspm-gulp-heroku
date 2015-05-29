@@ -40,6 +40,7 @@ For more information about using Node.js on Heroku, see these Dev Center article
 ## TODO
 
 ```
-$ Add Flux support
-$ Add testing support
+Add Flux support
+Add testing support
 ```
+

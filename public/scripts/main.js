@@ -1,6 +1,6 @@
 
 import React from 'react';
-
+import Actions from './actions/app-actions';
 
 class HelloWorld extends React.Component {
   render() {
