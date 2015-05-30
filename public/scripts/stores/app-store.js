@@ -8,12 +8,13 @@ var _catalog = [
     {id:3, title: 'Widget #3', cost: 3}
   ];
 
-var _cartItems = [];
+var cartItems = [];
 
 const AppStore = Reflux.createStore({
 
-  init(){
-    this.listenTo(AppActions.addItem, this.addItem);
+  listenables: [AppActions],
+  getInitialState(){
+    return{cartItems}
   },
 
   getCatalog(){
@@ -21,35 +22,39 @@ const AppStore = Reflux.createStore({
   },
 
   addItem(item){
-    console.log("Addin Item :: ", item);
     if(!item.inCart){
       item['qty'] = 1;
       item['inCart'] = true;
-      _cartItems.push(item);
+      cartItems.push(item);
     } else {
-      _cartItems.forEach((cartItem, i ) =>{
+      cartItems.forEach((cartItem, i ) =>{
         if(cartItem.id===item.id) {
-          increaseItem(i);
+          this.increaseItem(i);
         }
       });
     }
+
+    this.trigger(cartItems);
   },
 
   removeItem(index) {
-    _cartItems[index].inCart = false;
-    _cartItems.splice(index, 1);
+    cartItems[index].inCart = false;
+    cartItems.splice(index, 1);
+    this.trigger(cartItems);
   },
 
   increaseItem(index){
-    _cartItems[index].qty++;
+    cartItems[index].qty++;
+    this.trigger(cartItems);
   },
 
   decreaseItem(index){
-    if(_cartItems[index].qty>1){
-      _cartItems[index].qty--;
+    if(cartItems[index].qty>1){
+      cartItems[index].qty--;
     } else {
       removeItem(index);
     }
+    this.trigger(cartItems);
   }
 
 });

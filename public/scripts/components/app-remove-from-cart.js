@@ -5,6 +5,7 @@ import AppActions from '../actions/app-actions';
 class RemoveFromCart extends React.Component {
   constructor() {
     super();
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(){

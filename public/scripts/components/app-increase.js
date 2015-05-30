@@ -19,4 +19,4 @@ class Increase extends React.Component{
   }
 }
 
-eport default Increase;
+export default Increase;

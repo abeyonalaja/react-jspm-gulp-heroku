@@ -5,10 +5,11 @@ import AppActions from '../actions/app-actions'
 class AddToCart extends React.Component {
   constructor() {
     super();
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(){
-    AppActions.addItem(1);
+    AppActions.addItem(this.props.item);
   }
 
   render() {
