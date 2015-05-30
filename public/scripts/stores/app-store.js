@@ -52,7 +52,7 @@ const AppStore = Reflux.createStore({
     if(cartItems[index].qty>1){
       cartItems[index].qty--;
     } else {
-      removeItem(index);
+      this.removeItem(index);
     }
     this.trigger(cartItems);
   }
