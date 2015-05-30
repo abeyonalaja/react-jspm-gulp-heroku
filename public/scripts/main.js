@@ -4,6 +4,7 @@ import AppActions from './actions/app-actions';
 import AppStore   from './stores/app-store';
 import AddToCart  from './components/app-add-to-cart';
 import Reflux     from 'reflux';
+import Catalog    from './components/app-catalog';
 
 var TimeActions = Reflux.createActions(['tick'])
 
@@ -19,17 +20,17 @@ var TimeStore = Reflux.createStore({
   }
 })
 
-let HelloWorld = React.createClass({
+let App= React.createClass({
 
 
-  mixins: [Reflux.connect(TimeStore, 'tick')],
   render() {
     return (<div>
-            <AddToCart />
-              <p onClick={AppActions.addItem}>Hello World How ARE YOU</p>
+            <h1>Lets Shop</h1>
+            <Catalog />
+
            </div>);
   }
 })
 
 
-React.render(<HelloWorld />, document.body);
+React.render(<App />, document.body);

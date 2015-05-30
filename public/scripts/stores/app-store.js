@@ -16,9 +16,40 @@ const AppStore = Reflux.createStore({
     this.listenTo(AppActions.addItem, this.addItem);
   },
 
-  addItem(item){
+  getCatalog(){
+    return _catalog;
+  },
 
+  addItem(item){
     console.log("Addin Item :: ", item);
+    if(!item.inCart){
+      item['qty'] = 1;
+      item['inCart'] = true;
+      _cartItems.push(item);
+    } else {
+      _cartItems.forEach((cartItem, i ) =>{
+        if(cartItem.id===item.id) {
+          increaseItem(i);
+        }
+      });
+    }
+  },
+
+  removeItem(index) {
+    _cartItems[index].inCart = false;
+    _cartItems.splice(index, 1);
+  },
+
+  increaseItem(index){
+    _cartItems[index].qty++;
+  },
+
+  decreaseItem(index){
+    if(_cartItems[index].qty>1){
+      _cartItems[index].qty--;
+    } else {
+      removeItem(index);
+    }
   }
 
 });
