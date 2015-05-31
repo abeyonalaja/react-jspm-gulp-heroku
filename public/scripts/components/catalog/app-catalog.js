@@ -17,7 +17,9 @@ const Catalog = React.createClass({
 
     return(
           <table className="table tableble-hover">
-          {items}
+            <tbody>
+              {items}
+            </tbody>
           </table>
     )
   }

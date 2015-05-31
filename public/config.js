@@ -22,18 +22,22 @@ System.config({
     "bootstrap-sass": "npm:bootstrap-sass@3.3.4",
     "core-js": "npm:core-js@0.9.13",
     "react": "npm:react@0.14.0-alpha2",
+    "react-router-component": "npm:react-router-component@0.24.4",
     "reflux": "npm:reflux@0.2.7",
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.2.2"
     },
-    "github:jspm/nodelibs-events@0.1.0": {
-      "events-browserify": "npm:events-browserify@0.0.1"
+    "github:jspm/nodelibs-events@0.1.1": {
+      "events": "npm:events@1.0.2"
     },
     "github:jspm/nodelibs-path@0.1.0": {
       "path-browserify": "npm:path-browserify@0.0.0"
     },
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
+    },
+    "github:jspm/nodelibs-querystring@0.1.0": {
+      "querystring": "npm:querystring@0.2.0"
     },
     "github:jspm/nodelibs-stream@0.1.0": {
       "stream-browserify": "npm:stream-browserify@1.0.0"
@@ -63,6 +67,14 @@ System.config({
     "npm:core-util-is@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
+    "npm:envify@1.2.1": {
+      "esprima-fb": "npm:esprima-fb@3001.1.0-dev-harmony-fb",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "jstransform": "npm:jstransform@3.0.0",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "through": "npm:through@2.3.7",
+      "xtend": "npm:xtend@2.1.2"
+    },
     "npm:envify@3.4.0": {
       "jstransform": "npm:jstransform@10.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
@@ -72,12 +84,13 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
+    "npm:esprima-fb@3001.1.0-dev-harmony-fb": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
     "npm:eventemitter3@0.1.6": {
       "process": "github:jspm/nodelibs-process@0.1.1",
       "util": "github:jspm/nodelibs-util@0.1.0"
-    },
-    "npm:events-browserify@0.0.1": {
-      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
@@ -90,13 +103,42 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1",
       "source-map": "npm:source-map@0.1.31"
     },
+    "npm:jstransform@3.0.0": {
+      "base62": "npm:base62@0.1.1",
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "esprima-fb": "npm:esprima-fb@3001.1.0-dev-harmony-fb",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "source-map": "npm:source-map@0.1.31"
+    },
     "npm:native-promise-only@0.7.6-a": {
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
+    "npm:object.assign@1.1.1": {
+      "object-keys": "npm:object-keys@1.0.4"
+    },
     "npm:path-browserify@0.0.0": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:react-async@2.1.0": {
+      "ascii-json": "npm:ascii-json@0.2.0",
+      "react": "npm:react@0.13.3"
+    },
+    "npm:react-router-component@0.24.4": {
+      "envify": "npm:envify@1.2.1",
+      "object.assign": "npm:object.assign@1.1.1",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "querystring": "github:jspm/nodelibs-querystring@0.1.0",
+      "react": "npm:react@0.13.3",
+      "react-async": "npm:react-async@2.1.0",
+      "url-pattern": "npm:url-pattern@0.6.0",
+      "urllite": "npm:urllite@0.4.4"
+    },
+    "npm:react@0.13.3": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "envify": "npm:envify@3.4.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:react@0.14.0-alpha2": {
@@ -107,7 +149,7 @@ System.config({
     "npm:readable-stream@1.1.13": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "core-util-is": "npm:core-util-is@1.0.1",
-      "events": "github:jspm/nodelibs-events@0.1.0",
+      "events": "github:jspm/nodelibs-events@0.1.1",
       "inherits": "npm:inherits@2.0.1",
       "isarray": "npm:isarray@0.0.1",
       "process": "github:jspm/nodelibs-process@0.1.1",
@@ -127,7 +169,7 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:stream-browserify@1.0.0": {
-      "events": "github:jspm/nodelibs-events@0.1.0",
+      "events": "github:jspm/nodelibs-events@0.1.1",
       "inherits": "npm:inherits@2.0.1",
       "readable-stream": "npm:readable-stream@1.1.13"
     },
@@ -141,6 +183,9 @@ System.config({
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:xtend@2.1.2": {
+      "object-keys": "npm:object-keys@0.4.0"
     }
   }
 });

@@ -1,7 +1,8 @@
 
-import React from 'react';
+import React       from 'react';
+import CartSummary from './app-cart-summary';
 
-class Headr extends React.component{
+class Header extends React.Component{
 
   constructor() {
     super();
@@ -9,7 +10,15 @@ class Headr extends React.component{
 
   render(){
     return (
-      <div>header</div>
+      <div className="row">
+        <div className="col-sm-6">
+          <h1>Lets Shop</h1>
+        </div>
+        <div className="col-sm-2 col-sm-push-3">
+          <br />
+          <CartSummary />
+        </div>
+      </div>
     );
   }
 }

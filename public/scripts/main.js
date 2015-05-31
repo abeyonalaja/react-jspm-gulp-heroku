@@ -3,18 +3,22 @@ import React      from 'react';
 import AppActions from './actions/app-actions';
 import Catalog    from './components/catalog/app-catalog';
 import Cart       from './components/cart/app-cart';
+import Router     from 'react-router-component';
+import Template   from './app-template';
+
+let Locations = Router.Locations;
+let Location  = Router.Location;
 
 let App= React.createClass({
-
-
   render() {
-    return (<div>
-            <h1>Lets Shop</h1>
-            <Catalog />
-            <h1>In Cart</h1>
-            <Cart />
-
-           </div>);
+    return (
+      <Template>
+        <Locations>
+          <Location path="/" handler={Catalog} />
+          <Location path="/cart" handler={Cart} />
+        </Locations>
+      </Template>
+    );
   }
 })
 

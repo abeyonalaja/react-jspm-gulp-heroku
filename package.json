@@ -47,6 +47,7 @@
     "dependencies": {
       "bootstrap-sass": "npm:bootstrap-sass@^3.3.4",
       "react": "npm:react@^0.14.0-alpha2",
+      "react-router-component": "npm:react-router-component@^0.24.4",
       "reflux": "npm:reflux@^0.2.7"
     },
     "devDependencies": {

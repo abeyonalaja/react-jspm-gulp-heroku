@@ -1,16 +1,18 @@
 
 import React from 'react';
+import Header from './components/header/app-header';
 
-class Template extends React.Component{
-  constructor(){
-    super();
-  }
+let Template = React.createClass({
+
 
   render(){
     return(
-      <div>Template</div>
+      <div className="container">
+        <Header />
+        {this.props.children}
+      </div>
     );
   }
-}
+})
 
 export default Template;
