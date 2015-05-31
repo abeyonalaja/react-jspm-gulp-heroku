@@ -2,17 +2,26 @@
 import Reflux from 'reflux';
 import AppActions from '../actions/app-actions';
 
-var _catalog = [
-    {id:1, title: 'Widget #1', cost: 1},
-    {id:2, title: 'Widget #2', cost: 2},
-    {id:3, title: 'Widget #3', cost: 3}
-  ];
-
+var _catalog = [];
 var cartItems = [];
 
 const AppStore = Reflux.createStore({
 
+  init(){
+    for(var i=1; i<9; i++){
+      _catalog.push({
+        'id'          : 'widget' + i,
+        'title'       : 'widget #' + i,
+        'summary'     : 'This is an awesome widget',
+        'description' : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, commodi.',
+        'img'         : '/assets/product.png',
+        'cost'        : i
+      });
+    }
+  },
+
   listenables: [AppActions],
+  
   getInitialState(){
     return{cartItems}
   },

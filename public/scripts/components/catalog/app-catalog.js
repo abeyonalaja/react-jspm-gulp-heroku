@@ -1,8 +1,8 @@
 
 import React      from 'react';
-import AppActions from '../actions/app-actions';
-import AddToCart  from '../components/app-add-to-cart';
-import AppStore   from '../stores/app-store';
+import AppActions from '../../actions/app-actions';
+import AddToCart  from './app-add-to-cart';
+import AppStore   from '../../stores/app-store';
 
 const Catalog = React.createClass({
 

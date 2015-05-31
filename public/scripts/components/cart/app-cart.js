@@ -1,9 +1,9 @@
 
 import React          from 'react';
-import AppStore       from '../stores/app-store';
-import RemoveFromCart from '../components/app-remove-from-cart';
-import Increase       from '../components/app-increase';
-import Decrease       from '../components/app-decrease';
+import AppStore       from '../../stores/app-store';
+import RemoveFromCart from './app-remove-from-cart';
+import Increase       from './app-increase';
+import Decrease       from './app-decrease';
 import Reflux     from 'reflux';
 
 let Cart = React.createClass({
