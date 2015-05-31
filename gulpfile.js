@@ -70,15 +70,15 @@ gulp.task('jsx', plugins.shell.task([
   'jspm bundle-sfx scripts/main build/scripts/bundle.js'
 ]));
 
-gulp.task('dev-html', function(){
-  gulp.src(['./public/index.html'])
+gulp.task('dev-copy', function(){
+  gulp.src(['./public/index.html', './public/assets/**/*'],{base: 'public'})
     .pipe(gulp.dest('./build'))
     .on('error', plugins.util.log);
 });
 
 
 // serve task
-gulp.task('serve',['browser-sync', 'jsx', 'sass'], function(){
+gulp.task('serve',['dev-copy', 'browser-sync', 'jsx', 'sass'], function(){
   
   plugins.watch(
     './public/styles/**/*.scss',
@@ -123,10 +123,10 @@ gulp.task('dist-jsx', plugins.shell.task([
 ]));
 
 
-gulp.task('dist-html', function(){
-  gulp.src(['./public/index.html'])
+gulp.task('dist-copy', function(){
+  gulp.src( ['./public/index.html', './public/assets/**/*'],{base: 'public'}  )
     .pipe(gulp.dest('./dist'))
     .on('error', plugins.util.log);
 });
 
-gulp.task('dist',['dist-sass', 'dist-jsx', 'dist-html']);
+gulp.task('dist',['dist-sass', 'dist-jsx', 'dist-copy']);
